@@ -1,0 +1,323 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>ARCADE ZONE — Free Online Games</title>
+  <link rel="stylesheet" href="style.css"/>
+  <link href="https://fonts.googleapis.com/css2?family=Bebas+Neue&family=Barlow:wght@400;600;700&family=Barlow+Condensed:wght@700;900&display=swap" rel="stylesheet"/>
+</head>
+<body>
+
+  <!-- Scanline overlay -->
+  <div class="scanlines"></div>
+
+  <!-- HEADER -->
+  <header>
+    <div class="header-inner">
+      <div class="logo">
+        <span class="logo-icon">🕹️</span>
+        <span class="logo-text">ARCADE<span class="logo-accent">ZONE</span></span>
+      </div>
+      <nav>
+        <a href="#" class="nav-link active" data-filter="all">ALL GAMES</a>
+        <a href="#" class="nav-link" data-filter="sports">SPORTS</a>
+        <a href="#" class="nav-link" data-filter="action">ACTION</a>
+        <a href="#" class="nav-link" data-filter="puzzle">PUZZLE</a>
+        <a href="#" class="nav-link" data-filter="classic">CLASSIC</a>
+      </nav>
+    </div>
+  </header>
+
+  <!-- HERO -->
+  <section class="hero">
+    <div class="hero-bg-grid"></div>
+    <div class="hero-content">
+      <p class="hero-tagline">100% FREE • NO ADS • PLAY NOW</p>
+      <h1 class="hero-title">PLAY THE <span class="glitch" data-text="BEST">BEST</span><br>GAMES ONLINE</h1>
+      <p class="hero-sub">No downloads. No sign-ups. Just pure gaming.</p>
+      <a href="#games" class="cta-btn">BROWSE GAMES ↓</a>
+    </div>
+    <div class="hero-decoration">
+      <span>👾</span><span>🏀</span><span>⚔️</span><span>🏓</span><span>🚀</span><span>🎯</span>
+    </div>
+  </section>
+
+  <!-- FEATURED GAME -->
+  <section class="featured" id="featured">
+    <div class="section-header">
+      <span class="section-tag">⚡ FEATURED</span>
+      <h2>GAME OF THE DAY</h2>
+    </div>
+    <div class="featured-card">
+      <div class="featured-info">
+        <span class="feat-category">SPORTS</span>
+        <h3>Basketball Stars</h3>
+        <p>Challenge players worldwide in this fast-paced 1v1 basketball game. Show off your dribbling skills, hit crazy shots, and dominate the court!</p>
+        <div class="feat-meta">
+          <span>⭐ 4.8/5</span>
+          <span>👥 2M+ Players</span>
+          <span>🔥 Hot</span>
+        </div>
+        <button class="play-btn" onclick="openGame('https://www.miniclip.com/games/basketball-stars/en/', 'Basketball Stars')">
+          ▶ PLAY NOW
+        </button>
+      </div>
+      <div class="featured-thumb">
+        <div class="thumb-placeholder bball">
+          <span>🏀</span>
+          <p>Basketball Stars</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- GAME GRID -->
+  <section class="games-section" id="games">
+    <div class="section-header">
+      <span class="section-tag">🎮 ALL GAMES</span>
+      <h2>PICK YOUR GAME</h2>
+    </div>
+
+    <div class="games-grid" id="gamesGrid">
+
+      <!-- SPORTS -->
+      <div class="game-card" data-category="sports">
+        <div class="card-thumb emoji-thumb" style="--c1:#FF6B35;--c2:#FF8C42">
+          <span>🏀</span>
+        </div>
+        <div class="card-info">
+          <span class="card-tag">SPORTS</span>
+          <h4>Basketball Stars</h4>
+          <p>1v1 online basketball battles</p>
+          <button class="play-small" onclick="openGame('https://www.miniclip.com/games/basketball-stars/en/','Basketball Stars')">PLAY</button>
+        </div>
+      </div>
+
+      <div class="game-card" data-category="sports">
+        <div class="card-thumb emoji-thumb" style="--c1:#00C853;--c2:#1DE9B6">
+          <span>⚽</span>
+        </div>
+        <div class="card-info">
+          <span class="card-tag">SPORTS</span>
+          <h4>Soccer Random</h4>
+          <p>Wacky one-button soccer fun</p>
+          <button class="play-small" onclick="openGame('https://www.crazygames.com/game/soccer-random','Soccer Random')">PLAY</button>
+        </div>
+      </div>
+
+      <div class="game-card" data-category="sports">
+        <div class="card-thumb emoji-thumb" style="--c1:#FFCA28;--c2:#FF6F00">
+          <span>🎾</span>
+        </div>
+        <div class="card-info">
+          <span class="card-tag">SPORTS</span>
+          <h4>Table Tennis World Tour</h4>
+          <p>Compete in ping pong tournaments</p>
+          <button class="play-small" onclick="openGame('https://www.crazygames.com/game/table-tennis-world-tour','Table Tennis World Tour')">PLAY</button>
+        </div>
+      </div>
+
+      <div class="game-card" data-category="sports">
+        <div class="card-thumb emoji-thumb" style="--c1:#E91E63;--c2:#F06292">
+          <span>🥊</span>
+        </div>
+        <div class="card-info">
+          <span class="card-tag">SPORTS</span>
+          <h4>Boxing Random</h4>
+          <p>Hilarious 2-player boxing chaos</p>
+          <button class="play-small" onclick="openGame('https://www.crazygames.com/game/boxing-random','Boxing Random')">PLAY</button>
+        </div>
+      </div>
+
+      <!-- ACTION -->
+      <div class="game-card" data-category="action">
+        <div class="card-thumb emoji-thumb" style="--c1:#7C4DFF;--c2:#B388FF">
+          <span>🔫</span>
+        </div>
+        <div class="card-info">
+          <span class="card-tag">ACTION</span>
+          <h4>Shell Shockers</h4>
+          <p>Egg-based multiplayer shooter</p>
+          <button class="play-small" onclick="openGame('https://shellshock.io','Shell Shockers')">PLAY</button>
+        </div>
+      </div>
+
+      <div class="game-card" data-category="action">
+        <div class="card-thumb emoji-thumb" style="--c1:#F44336;--c2:#FF7043">
+          <span>⚔️</span>
+        </div>
+        <div class="card-info">
+          <span class="card-tag">ACTION</span>
+          <h4>Stickman Fighter</h4>
+          <p>Epic stickman combat battles</p>
+          <button class="play-small" onclick="openGame('https://www.crazygames.com/game/stickman-fighter-epic-battle','Stickman Fighter')">PLAY</button>
+        </div>
+      </div>
+
+      <div class="game-card" data-category="action">
+        <div class="card-thumb emoji-thumb" style="--c1:#00BCD4;--c2:#00E5FF">
+          <span>🚀</span>
+        </div>
+        <div class="card-info">
+          <span class="card-tag">ACTION</span>
+          <h4>Agar.io</h4>
+          <p>Grow your cell, eat others</p>
+          <button class="play-small" onclick="openGame('https://agar.io','Agar.io')">PLAY</button>
+        </div>
+      </div>
+
+      <div class="game-card" data-category="action">
+        <div class="card-thumb emoji-thumb" style="--c1:#FF5722;--c2:#FFCCBC">
+          <span>🐍</span>
+        </div>
+        <div class="card-info">
+          <span class="card-tag">ACTION</span>
+          <h4>Slither.io</h4>
+          <p>Grow the biggest snake online</p>
+          <button class="play-small" onclick="openGame('https://slither.io','Slither.io')">PLAY</button>
+        </div>
+      </div>
+
+      <!-- PUZZLE -->
+      <div class="game-card" data-category="puzzle">
+        <div class="card-thumb emoji-thumb" style="--c1:#3F51B5;--c2:#7986CB">
+          <span>🧩</span>
+        </div>
+        <div class="card-info">
+          <span class="card-tag">PUZZLE</span>
+          <h4>2048</h4>
+          <p>Slide tiles to reach 2048</p>
+          <button class="play-small" onclick="openGame('https://play2048.co','2048')">PLAY</button>
+        </div>
+      </div>
+
+      <div class="game-card" data-category="puzzle">
+        <div class="card-thumb emoji-thumb" style="--c1:#009688;--c2:#80CBC4">
+          <span>🎯</span>
+        </div>
+        <div class="card-info">
+          <span class="card-tag">PUZZLE</span>
+          <h4>Wordle</h4>
+          <p>Guess the 5-letter word in 6 tries</p>
+          <button class="play-small" onclick="openGame('https://www.nytimes.com/games/wordle/index.html','Wordle')">PLAY</button>
+        </div>
+      </div>
+
+      <div class="game-card" data-category="puzzle">
+        <div class="card-thumb emoji-thumb" style="--c1:#FF9800;--c2:#FFE082">
+          <span>🔢</span>
+        </div>
+        <div class="card-info">
+          <span class="card-tag">PUZZLE</span>
+          <h4>Sudoku</h4>
+          <p>Classic number logic puzzle</p>
+          <button class="play-small" onclick="openGame('https://sudoku.com','Sudoku')">PLAY</button>
+        </div>
+      </div>
+
+      <div class="game-card" data-category="puzzle">
+        <div class="card-thumb emoji-thumb" style="--c1:#AB47BC;--c2:#E1BEE7">
+          <span>🃏</span>
+        </div>
+        <div class="card-info">
+          <span class="card-tag">PUZZLE</span>
+          <h4>Mahjong</h4>
+          <p>Match tiles in this classic game</p>
+          <button class="play-small" onclick="openGame('https://www.mahjong.co.uk','Mahjong')">PLAY</button>
+        </div>
+      </div>
+
+      <!-- CLASSIC -->
+      <div class="game-card" data-category="classic">
+        <div class="card-thumb emoji-thumb" style="--c1:#4CAF50;--c2:#A5D6A7">
+          <span>🐸</span>
+        </div>
+        <div class="card-info">
+          <span class="card-tag">CLASSIC</span>
+          <h4>Frogger</h4>
+          <p>Help the frog cross the road!</p>
+          <button class="play-small" onclick="openGame('https://www.crazygames.com/game/frogger','Frogger')">PLAY</button>
+        </div>
+      </div>
+
+      <div class="game-card" data-category="classic">
+        <div class="card-thumb emoji-thumb" style="--c1:#607D8B;--c2:#B0BEC5">
+          <span>🟡</span>
+        </div>
+        <div class="card-info">
+          <span class="card-tag">CLASSIC</span>
+          <h4>Pac-Man</h4>
+          <p>Eat dots, dodge ghosts</p>
+          <button class="play-small" onclick="openGame('https://www.google.com/logos/2010/pacman10-i.html','Pac-Man')">PLAY</button>
+        </div>
+      </div>
+
+      <div class="game-card" data-category="classic">
+        <div class="card-thumb emoji-thumb" style="--c1:#00897B;--c2:#80CBC4">
+          <span>🦕</span>
+        </div>
+        <div class="card-info">
+          <span class="card-tag">CLASSIC</span>
+          <h4>Dino Runner</h4>
+          <p>Chrome's famous offline dino game</p>
+          <button class="play-small" onclick="openGame('https://chromedino.com','Dino Runner')">PLAY</button>
+        </div>
+      </div>
+
+      <div class="game-card" data-category="classic">
+        <div class="card-thumb emoji-thumb" style="--c1:#1565C0;--c2:#90CAF9">
+          <span>🧱</span>
+        </div>
+        <div class="card-info">
+          <span class="card-tag">CLASSIC</span>
+          <h4>Tetris</h4>
+          <p>The original block stacking game</p>
+          <button class="play-small" onclick="openGame('https://jstris.jezevec10.com','Tetris')">PLAY</button>
+        </div>
+      </div>
+
+    </div>
+  </section>
+
+  <!-- GAME MODAL / LAUNCHER -->
+  <div class="modal-overlay" id="modalOverlay" onclick="closeGame()">
+    <div class="modal" onclick="event.stopPropagation()">
+      <div class="modal-header">
+        <h3 id="modalTitle">Game</h3>
+        <div class="modal-actions">
+          <a id="modalExternal" href="#" target="_blank" class="ext-btn">🔗 Open Full Screen</a>
+          <button onclick="closeGame()" class="close-btn">✕ CLOSE</button>
+        </div>
+      </div>
+      <div class="modal-body">
+        <div class="embed-notice" id="embedNotice">
+          <div class="notice-icon">🎮</div>
+          <h4 id="noticeName">Game Name</h4>
+          <p>Some games don't allow embedding for security reasons. Click the button below to play in a new tab — it'll open instantly!</p>
+          <a id="noticeLink" href="#" target="_blank" class="cta-btn">▶ OPEN GAME IN NEW TAB</a>
+          <button onclick="tryEmbed()" class="try-btn">Try Embed Anyway</button>
+        </div>
+        <iframe id="gameFrame" src="" allowfullscreen style="display:none"></iframe>
+      </div>
+    </div>
+  </div>
+
+  <!-- FOOTER -->
+  <footer>
+    <div class="footer-inner">
+      <div class="logo">
+        <span class="logo-icon">🕹️</span>
+        <span class="logo-text">ARCADE<span class="logo-accent">ZONE</span></span>
+      </div>
+      <p>A free games portal. All games are property of their respective owners.</p>
+      <p class="footer-links">
+        <a href="https://github.com" target="_blank">GitHub</a> •
+        Made with ❤️ for gamers
+      </p>
+    </div>
+  </footer>
+
+  <script src="script.js"></script>
+</body>
+</html>
